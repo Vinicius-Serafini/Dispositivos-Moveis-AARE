@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/edAtivo"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Digite o código Bovespa"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/txtLucroLiquido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtAtivo"
+            android:layout_width="112dp"
+            android:layout_height="31dp"
+            android:text="Codigo Bovespa"
+            android:textAlignment="gravity"
+            android:textColor="#454545"
+            app:layout_constraintBottom_toTopOf="@+id/edAtivo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/edPatrimonioLiquido"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Digite o Patrimônio Liquido"
+            android:inputType="numberSigned|number|numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/txtAcoesBolsa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtPatrimonioLiquido"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Patrimônio Líquido"
+            android:textColor="#454545"
+            app:layout_constraintBottom_toTopOf="@+id/edPatrimonioLiquido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.206"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edPrecoAtual"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Preço atual do ativo na bolsa"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/bttCalcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtLucroLiquido"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Lucro Líquido"
+            android:textColor="#454545"
+            app:layout_constraintBottom_toTopOf="@+id/edLucroLiquido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.184"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edNAcoesBolsa"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Digite o N° de Ações"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrecoAtual"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtAcoesBolsa"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="N° de Ações Emitidas na Bolsa"
+            android:textColor="#454545"
+            app:layout_constraintBottom_toTopOf="@+id/edNAcoesBolsa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.276"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtPrecoAtual"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Preço Atual do Ativo na Bolsa"
+            android:textColor="#454545"
+            app:layout_constraintBottom_toTopOf="@+id/edPrecoAtual"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.267"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edLucroLiquido"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Digite o Lucro Líquido"
+            android:inputType="numberSigned|number|numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/txtPatrimonioLiquido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/bttCalcular"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="576dp"
+            android:onClick="getVariables"
+            android:text="Calcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
